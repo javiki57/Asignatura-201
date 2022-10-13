@@ -37,6 +37,7 @@ public class Analizador {
 		para establecer un ratio.
 		 */
 		if(!esNF()){
+
 			for(int i=1;i<=5;i++){
 				suma1+=tiempo[i];
 			}
@@ -49,6 +50,7 @@ public class Analizador {
 
 			// Si supera este ratio, quiere decir que la complejidad es superior a N
 			if(ratio<1.7) return esGrande=false;
+
 			else{
 				if(ratio<4){
 					Temporizador t = new Temporizador();
@@ -62,16 +64,25 @@ public class Analizador {
 					}
 
 					double media=media(tiempo);
+
 					if(media<65000){
+
 						System.out.println("NLOGN");
-					}else{
+					
+                                        }else{
 						System.out.println("N2");
+
 					}
+                                        
 				}else if(ratio<8){
+
 					System.out.println("N3");
+
 				}else{
+
 					System.out.println("2N");
 				}
+
 				return esGrande;
 			}
 		}else{
@@ -98,8 +109,8 @@ public class Analizador {
 			tiempo[i]=t.tiempoPasado();
 
 			if(i!=0){
-				//Tras hacer pruebas, si la division de los tiempos es mayor que 100, la complejidad es NF
-				if((t.tiempoPasado()/tiempo[i-1])>100){
+				//Tras hacer pruebas, si la division de los tiempos es mayor que 10, la complejidad es NF
+				if((t.tiempoPasado()/tiempo[i-1])>10){
 					i = 12;
 					NF=true;
 				}
