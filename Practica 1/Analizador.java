@@ -146,7 +146,7 @@ public class Analizador {
 			//Aqui manejamos las complejidades menores o iguales que N
 			media = media(tiempo);
 
-			if(media<180){
+			if(media<140){
 
 				System.out.println("1");
 
