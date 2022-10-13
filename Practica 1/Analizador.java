@@ -21,6 +21,7 @@ public class Analizador {
 		for(int i=1;i<a.length;i++){ //cogemos a partir del segundo valor para mas exactitud
 			media+=a[i];
 		}
+
 		media=media/a.length-1;
 
 		return media;
@@ -86,6 +87,7 @@ public class Analizador {
 				return esGrande;
 			}
 		}else{
+
 			System.out.println("NF");
 		}
 
@@ -132,6 +134,7 @@ public class Analizador {
 		Temporizador t = new Temporizador();
 
 		if(!costeAlto()){
+
 			for(int i=0;i<n1.length;i++){
 				t.iniciar();
 				Algoritmo.f(n1[i]);
@@ -142,10 +145,15 @@ public class Analizador {
 
 			//Aqui manejamos las complejidades menores o iguales que N
 			media = media(tiempo);
+
 			if(media<180){
+
 				System.out.println("1");
+
 			}else if(media<10000){
+
 				System.out.println("LOGN");
+
 			}else{
 				System.out.println("N");
 			}
