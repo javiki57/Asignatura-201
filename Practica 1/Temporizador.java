@@ -12,7 +12,6 @@ public class Temporizador {
 	private boolean andando;
 	private long tiempoInicio;
 	private long tiempoPasado;
-
 	
 	// Crea un temporizador
 	public Temporizador() {
