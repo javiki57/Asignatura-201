@@ -1,7 +1,7 @@
 
 public class Analizador {
 
-	// Utilizaremos n1 para medir las complejidades pequeñas
+	// Utilizaremos n1 para medir las complejidades pequenas
 	private static final long [] n1 = {1,2,3,4,5,6,7,8,9,10,12,14,16,18,20,22,24,26,28,30,40,50,60,70,80,90,100,
 			300,500,700,1000,3000,5000,7000,10000,30000,50000,70000,
 			100000,200000,300000,500000,700000,800000,850000,900000,950000,
@@ -18,7 +18,7 @@ public class Analizador {
 	public static double media(double a[]){
 		double media=0.0;
 
-		for(int i=1;i<a.length;i++){ //cogemos a partir del segundo valor para más exactitud
+		for(int i=1;i<a.length;i++){ //cogemos a partir del segundo valor para mas exactitud
 			media+=a[i];
 		}
 		media=media/a.length-1;
@@ -33,7 +33,7 @@ public class Analizador {
 		double ratio= 0.0;
 
 		/*
-		Sumamos los 5 primeros tiempos y los dividimos entre los 5 últimos
+		Sumamos los 5 primeros tiempos y los dividimos entre los 5 ultimos
 		para establecer un ratio.
 		 */
 		if(!esNF()){
@@ -82,9 +82,9 @@ public class Analizador {
 	}
 
 	/*
-	En este método vamos a coger algunos valores del array n1 para tener una
-	idea a priori de la complejidad con valores pequeños, ya que, en otro caso,
-	si fuese muy grande los tiempos serían muy grandes. A su vez, también
+	En este metodo vamos a coger algunos valores del array n1 para tener una
+	idea a priori de la complejidad con valores pequenos, ya que, en otro caso,
+	si fuese muy grande los tiempos serian muy grandes. A su vez, tambien
 	comprobamos si es NF.
 	 */
 	public static boolean esNF(){
@@ -98,7 +98,7 @@ public class Analizador {
 			tiempo[i]=t.tiempoPasado();
 
 			if(i!=0){
-				//Tras hacer pruebas, si la división de los tiempos es mayor que 100, la complejidad es NF
+				//Tras hacer pruebas, si la division de los tiempos es mayor que 100, la complejidad es NF
 				if((t.tiempoPasado()/tiempo[i-1])>100){
 					i = 12;
 					NF=true;
@@ -109,9 +109,9 @@ public class Analizador {
 		return NF;
 	}
 
-	/*	Vamos a dividir las complejidades en dos partes, pequeñas y grandes,
-		de tal forma que usaremos unos valores más altos para complejidades altas
-		y unos valores más pequeños para complejidades más pequeñas.
+	/*	Vamos a dividir las complejidades en dos partes, pequenas y grandes,
+		de tal forma que usaremos unos valores mas altos para complejidades altas
+		y unos valores mas pequenos para complejidades mas pequenas.
 	*/
 
 	public static void main(String arg[]) {
@@ -129,7 +129,7 @@ public class Analizador {
 				t.reiniciar();
 			}
 
-			//Aquí manejamos las complejidades menores o iguales que N
+			//Aqui manejamos las complejidades menores o iguales que N
 			media = media(tiempo);
 			if(media<180){
 				System.out.println("1");
