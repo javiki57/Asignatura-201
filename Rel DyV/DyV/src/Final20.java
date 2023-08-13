@@ -2,7 +2,9 @@ public class Final20 {
     /*
     Sea un array A ordenado de tamaño n, que contiene todos los elementos 1,2,... n-1. Se desea encontrar el
     único elemento que está repetido.
-    Diseña un algoritmo de Divide y Vencerás de complejidad O(log n)
+    a) Diseña un algoritmo de Divide y Vencerás de complejidad O(log n)
+    b) Expresa la complejidad mediante una ecuación de recurrencia y determina su orden de complejidad mediante el
+    Teorema Maestro.
      */
 
     static int findRepeated(int[] a, int l, int r){
