@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Analizador">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Analizador.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
