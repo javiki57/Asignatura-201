@@ -23,7 +23,7 @@ public class Final20 {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1,1, 2, 3, 4, 5, 6, 7};
+        int[] arr = {1, 2, 3, 4, 5, 6, 7};
 
         int repeated = findRepeated(arr, 1, arr.length - 1);
         System.out.println("El número repetido es: " + repeated); // Debería mostrar 4
