@@ -13,6 +13,7 @@ public class Parcial1 {
 
         if(a[m] > a[r]){
             return encuentra(a, m+1, r);
+
         }else{
             return encuentra(a,l,m);
         }
@@ -20,7 +21,7 @@ public class Parcial1 {
     }
 
     public static void main(String[] args) {
-        int[] fila = {23, 63,234, 235, 267, 438, 78}; // Ejemplo de fila
+        int[] fila = {234,235,267,438,23,63,78}; // Ejemplo de fila
         int lowestPosition = encuentraInicioDyV(fila);
 
         System.out.println("Posición de la persona con el ticket más bajo: " + lowestPosition);
