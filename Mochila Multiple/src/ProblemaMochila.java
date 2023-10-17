@@ -196,8 +196,8 @@ public class ProblemaMochila {
 			int[] solucion2 = ArrayUtils.toInt(sm2.getSolucion());
 			int sumaValores1 = sumaValores(solucion1);
 			int sumaValores2 = sumaValores(solucion2);
-			//int sumaPesos1 = sumaPesos(solucion1);
-			//int sumaPesos2 = sumaPesos(solucion2);
+			int sumaPesos1 = sumaPesos(solucion1);
+			int sumaPesos2 = sumaPesos(solucion2);
 			if (sumaValores1 == sumaValores2) { // Comprueba si las soluciones suman realmente lo mismo
 				equivalente = true;
 			}
