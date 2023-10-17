@@ -120,8 +120,9 @@ public class Analyzer implements Runnable {
     public static long ejecucion(Algorithm a, long n, long maxExecutionTime) {
 
         Chronometer chrono = new Chronometer();
-        chrono.start();
+        //chrono.pause();
         a.init(n);
+        //chrono.resume();
         a.run();
         chrono.stop();
         if (chrono.getElapsedTime() > maxExecutionTime) {
