@@ -8,26 +8,26 @@ public class Final20 {
      */
 
     static int findRepeated(int[] a, int l, int r){
+        // Caso base: si el array tiene solo dos elementos, se devuelve el mayor como el repetido
         if (l >= r) {
-            return -1; // No se encontró el número repetido
+            return a[r];
         }
 
-        int m = l + (r - l) / 2;
+        // Se calcula el índice del elemento medio del array
+        int m = (l + r) / 2;
 
-        if (a[m] == a[m-1] || a[m] ==a[m+1]) {
-            return a[m]; // Se encontró el índice del número repetido
-
-        } else if (a[m] < m + a[0]) {
-            // El número repetido está en la mitad izquierda
-            return findRepeated(a, l, m - 1);
-        } else {
-            // El número repetido está en la mitad derecha
+        // Se compara el elemento medio con su índice
+        if (a[m] == m + 1) {
+            // Si son iguales, el elemento repetido está en la segunda mitad del array
             return findRepeated(a, m + 1, r);
+        } else {
+            // Si son distintos, el elemento repetido está en la primera mitad del array
+            return findRepeated(a, l, m);
         }
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 5, 6, 6, 7};
+        int[] arr = {1, 2, 3, 4, 5, 5, 6, 7};
 
         int repeated = findRepeated(arr, 0, arr.length - 1);
         System.out.println("El número repetido es: " + repeated); // Debería mostrar 6

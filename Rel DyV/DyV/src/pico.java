@@ -1,7 +1,7 @@
 public class pico {
     /*
     Sea un array de un número de enteros estrictamente creciente seguido por una secuencia estrictamente decreciente,
-    construye una función (utilizando la técnica de divide y vencerás) int pico(int[]a) que devuelva el valor del array
+    construye una función (utilizando la técnica divide y vencerás) int pico(int[]a) que devuelva el valor del array
     donde pasa de ser creciente a decreciente.
      */
 
