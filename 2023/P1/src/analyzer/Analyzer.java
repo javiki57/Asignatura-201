@@ -117,20 +117,16 @@ public class Analyzer implements Runnable {
     }
 
 
-    public static long ejecucion(Algorithm a, long n, long maxExecutionTime) {
+    public static long ejecucion(Algorithm a, long n) {
 
         Chronometer chrono = new Chronometer();
         //chrono.pause();
         a.init(n);
         //chrono.resume();
         a.run();
-        chrono.stop();
-        if (chrono.getElapsedTime() > maxExecutionTime) {
+        //chrono.stop();
 
-            return maxExecutionTime;
-        }
-
-        return chrono.getElapsedTime();
+        return chrono.getElapsedTime()*1000;
     }
 
     public static double getMinRatio(Algorithm a, final long n1, final long n2, long maxExecutionTime) {
@@ -138,17 +134,14 @@ public class Analyzer implements Runnable {
         long min2 = Long.MAX_VALUE;
 
         for (int i = 0; i < ITERATIONS; i++) {
-            long ejecucion1 = ejecucion(a, n1, maxExecutionTime); // Mide el tiempo de ejecución para n1.
-            long ejecucion2 = ejecucion(a, n2, maxExecutionTime); // Mide el tiempo de ejecución para n2.
+            long ejecucion1 = ejecucion(a, n1); // Mide el tiempo de ejecución para n1.
+            long ejecucion2 = ejecucion(a, n2); // Mide el tiempo de ejecución para n2.
 
             min1 = Math.min(min1, ejecucion1) <= 0 ? min1 : Math.min(min1, ejecucion1);  // Mide el tiempo de ejecución para n1.
             min2 = Math.min(min2, ejecucion2) <= 0 ? min2 : Math.min(min2, ejecucion2);  // Mide el tiempo de ejecución para n2.
 
 
-            if (ejecucion1 > maxExecutionTime || ejecucion2 > maxExecutionTime) {
-                // Detener la ejecución o tomar medidas necesarias
-                break;
-            }
+
         }
 
         double ratio = (double) min2 / min1; // Calcula el ratio entre los tiempos de ejecución.
