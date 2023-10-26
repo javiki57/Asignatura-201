@@ -157,13 +157,22 @@ public class Main {
         //
         // Replace all the code in this method with your own code.
 
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        MapNode mejor = nodesList.get(nodesList.size()-1);
+        int cont = 0;
+        ArrayList<MapNode> lista = new ArrayList<>();
+        for(MapNode node : nodesList){
 
-        return nodesList;
+            if(mejor.getValue(0) <= node.getValue(0) && cont < count){
+                lista.add(node);
+                mejor = node;
+                cont++;
+            } else if (cont >= count) {
+                return lista;
+            }
+        }
+        return lista;
+
+
     }
 
     private static ArrayList<MapNode> selectBestNodesInsertionSort(ArrayList<MapNode> nodesList, int count) {
