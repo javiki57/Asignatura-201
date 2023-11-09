@@ -22,7 +22,7 @@ public class Config {
     public Config(){
         // Set default values
         values[Parameter.MAX_EXECUTION_TIME.ordinal()] = 10 * 1000; // in milliseconds
-        values[Parameter.STRICT_TIMEOUT.ordinal()] = 0; // 0 = false, 1 = true
+        values[Parameter.STRICT_TIMEOUT.ordinal()] = 1; // 0 = false, 1 = true
         values[Parameter.VERBOSE.ordinal()] = 1; // 0 = false, 1 = true
     }
 

@@ -171,6 +171,7 @@ public class Main {
         return bestNoSort;
     }
 
+
     private static ArrayList<MapNode> selectBestNodesNoSort(ArrayList<MapNode> nodesList, int count) {
         // TODO: Return "count" nodes with the lowest value in the index 0 WITHOUT ORDERING the list. Given a node
         // in the list, the value of the node is accessed with node.getValue(0).
@@ -183,9 +184,9 @@ public class Main {
             return nodesList;
         }
 
-        //Iteramos count veces para encontrar los mejores valores.
+        //Iteramos count veces para encontrar los mejores valores.  >
         for(int i=0; i < count ; i++){
-            MapNode minNode = nodesList.get(0);
+            MapNode minNode = nodesList.get(0); // Inicializamos con el primer nodo como mínimo
             for(MapNode node : nodesList){
                 if(node.getValue(0) < minNode.getValue(0)){
                     minNode = node;
@@ -198,6 +199,7 @@ public class Main {
         return mejores;
     }
 
+
     private static ArrayList<MapNode> selectBestNodesInsertionSort(ArrayList<MapNode> nodesList, int count) {
         // TODO: Implement insertion sort according to the values of nodes in the index 0. Given a node in the list, the value
         // of the node is accessed with node.getValue(0). The list is sorted in ascending order.
@@ -209,7 +211,7 @@ public class Main {
             float valoractual = actual.getValue(0);
             int j = i-1;
 
-            //Mover los mayores que el actual hacia la derecha
+            //Mover los mayores que el actual hacia la derecha  <
             while(j >= 0 && nodesList.get(j).getValue(0) > valoractual){
                 nodesList.set(j+1, nodesList.get(j));
                 j--;
@@ -218,7 +220,7 @@ public class Main {
             //Colocamos el valor actual en su posición correcta
             nodesList.set(j+1,actual);
         }
-
+        // Crear una nueva lista para almacenar los "count" primeros nodos ordenados
         ArrayList<MapNode> bestNodes = new ArrayList<>();
         for(int i=0; i<count && i<nodesList.size(); i++){
             bestNodes.add(nodesList.get(i));
@@ -233,7 +235,7 @@ public class Main {
         // Return the "count" first nodes in the list.
         //
 
-        //Comprobamos que la lista o con un elemento
+        //Comprobamos que la lista está vacía o con un elemento
         if(nodesList.size() <= 1){
             return nodesList;
         }
@@ -247,7 +249,7 @@ public class Main {
         izq = selectBestNodesMergeSort(izq,count);
         der = selectBestNodesMergeSort(der,count);
 
-        //combinación de ambas mitades
+        //combinación de ambas mitades >=
         ArrayList<MapNode> result = new ArrayList<>();
         int i=0, j=0;
         while(i < izq.size() && j < der.size()){
@@ -312,7 +314,7 @@ public class Main {
         int i = izq - 1;
 
         for(int j = izq; j<der ; j++){
-            // Si el elemento actual es menor o igual al pivote, lo intercambiamos con el elemento en el índice i+1
+            // Si el elemento actual es menor o igual al pivote, lo intercambiamos con el elemento en el índice i+1 =>
             if(nodesList.get(j).getValue(0) <= pivote){
                 i++;
                 cambio(nodesList, i, j);
