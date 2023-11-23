@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6aacd93c-16fd-4887-a027-3603204fdc77" name="Changes" comment="Practica 3">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/towerdefense.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/enemy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/floor_tiles.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/grass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/pause.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/play.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/rock.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/turret.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/compile.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/compile.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/agsh/towerdefense/strats/TowerBuyer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p3/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p3/.idea/libraries/towerdefense.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p3/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p3/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p3/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p3/assets/enemy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p3/assets/floor_tiles.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p3/assets/grass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p3/assets/pause.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p3/assets/play.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p3/assets/rock.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p3/assets/turret.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p3/compile.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p3/compile.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p3/net/agsh/towerdefense/strats/TowerBuyer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p3/p3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p3/run-gui.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p3/run-gui.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p3/run.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p3/run.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/p3/towerdefense.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/p3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run-gui.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run-gui.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/towerdefense.jar" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2YWtM6WWvTNIq65D0xBA0nxSGGS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/IT/2022-2023/ADA/2023/P3",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.ada-p3">
+    <configuration name="ada-p3" type="Application" factoryName="Application">
+      <classpathModifications>
+        <entry path="D:\IT\2022-2023\ADA\2023\P3\p3" />
+        <entry path="D:\IT\2022-2023\ADA\2023\P3\p3\towerdefense.jar" />
+      </classpathModifications>
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="p3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="compile.sh" type="ShConfigurationType" temporary="true">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/compile.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.ada-p3" />
+      <item itemvalue="Shell Script.compile.sh" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Shell Script.compile.sh" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6aacd93c-16fd-4887-a027-3603204fdc77" name="Changes" comment="" />
+      <created>1700653111953</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1700653111953</updated>
+      <workItem from="1700653112960" duration="2872000" />
+      <workItem from="1700737630340" duration="657000" />
+    </task>
+    <task id="LOCAL-00001" summary="Practica 3">
+      <option name="closed" value="true" />
+      <created>1700653511600</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1700653511600</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Practica 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Practica 3" />
+  </component>
+</project>
