@@ -60,6 +60,6 @@ public class TowerBuyer {
     }
 
     public static float getTowerValue(Tower tower) {
-        return tower.getRange() + 2 * tower.getDispersion() + tower.getDamage();
+        return   tower.getDispersion() / 3 * tower.getRange() + (2 * tower.getDamage() / tower.getRange()) ;
     }
 }
