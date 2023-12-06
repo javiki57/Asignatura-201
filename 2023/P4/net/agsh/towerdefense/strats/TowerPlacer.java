@@ -129,8 +129,8 @@ public class TowerPlacer {
        float radius = tower.getRadius();
 
        // Verificar si la torre queda completamente dentro de los límites del terreno de juego
-       boolean dentroLimites = limits(candidatePosition, radius, map);
-       if (!dentroLimites) {
+       boolean fueraLimites = limits(candidatePosition, radius, map);
+       if (fueraLimites) {
            return false;
        }
 
