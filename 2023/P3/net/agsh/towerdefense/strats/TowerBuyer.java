@@ -1,6 +1,10 @@
 /*
-Sustituir este comentario por una explicación de la formula o procedimiento empleado para determinar el valor de una
-torreta.
+La fórmula ha sido deducida a través de ensayo y error. Básicamente se ha realizado una suma
+de tres divisiones distintas. El motivo de estas divisiones ha sido relacionar ciertas variables
+que he considerado que tienen relación entre ellas y sumar cada una de las relaciones. Además,
+aunque no modifica significativamente el resultado, algunas de las variables están multiplicadas
+por un valor, los cuales han sido introducidos después de realizar varias pruebas.
+
 */
 
 package net.agsh.towerdefense.strats;
@@ -60,6 +64,6 @@ public class TowerBuyer {
     }
 
     public static float getTowerValue(Tower tower) {
-        return   tower.getDispersion() / 3 * tower.getRange() + (2 * tower.getDamage() / tower.getRange());
+        return   tower.getCost() / 2 * tower.getRadius() + tower.getDispersion() / 3 * tower.getRange() + (tower.getDamage() / tower.getRange());
     }
 }
