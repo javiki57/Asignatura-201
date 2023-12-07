@@ -10,35 +10,20 @@ import net.agsh.towerdefense.*;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class TowerPlacer {
 
     public static float getNodeValue(MapNode node, Map map) {
 
-        ArrayList<MapNode> walkableNodes = map.getWalkableNodes();
+        float mapWidth = map.getSize().x;
 
-        // Calcular la distancia media desde el nodo actual a los caminos
-        double totalDistance = 0.0;
-        for (MapNode walkableNode : walkableNodes) {
-            totalDistance += node.getPosition().distance(walkableNode.getPosition());
-        }
+        // Obtener la coordenada x de la celda
+        float xCoordinate = node.getPosition().x;
 
-        // Calcular la distancia media
-        double averageDistance = totalDistance / walkableNodes.size();
+        // Asignar un valor inversamente proporcional a la distancia a la coordenada x más grande
+        float value = 1.0f / (float) (mapWidth - xCoordinate + 1);
 
-        // Obtener el radio máximo de los enemigos (por ejemplo, 10 unidades)
-        float maxEnemyRadius = 10.0f;
-
-        // Calcular el valor de la celda del terreno basado en la inversa de la distancia media a los caminos
-        // Cuanto menor sea la distancia media, mayor será el valor
-        float calculatedValue = 1.0f / (float) (averageDistance + maxEnemyRadius);
-
-        // Aumentar el valor para las celdas cercanas a los caminos
-        float proximityBonus = 2.0f; // Ajusta según sea necesario
-        calculatedValue += proximityBonus / (float) node.getPosition().distance(getClosestWalkableNode(node, walkableNodes).getPosition());
-
-        return calculatedValue;
+        return value;
     }
 
     // Método auxiliar para obtener el nodo caminable más cercano a un nodo dado
@@ -115,6 +100,8 @@ public class TowerPlacer {
                 tower.setPosition(candidatePosition);
                 placedTowers.add(tower);
 
+            }else{
+                towers.add(tower);
             }
 
         }
@@ -134,7 +121,7 @@ public class TowerPlacer {
            return false;
        }
 
-       // Verificar colisiones con obstáculos y otras torres
+       // Verificar colisiones con obstáculos
        for (Obstacle o : obstacles) {
            if (collide(candidatePosition, radius, o.getPosition(), o.getRadius())) {
                return false; // Colisión con un obstáculo
@@ -150,9 +137,11 @@ public class TowerPlacer {
 
        // Verificar que no se coloque sobre los caminos
        for (MapNode walkableNode : map.getWalkableNodes()) {
-           float distanceToNode = candidatePosition.distance(walkableNode.getPosition());
-           if (distanceToNode < radius) {
-               return false; // Colisión con un camino
+          // float distanceToNode = candidatePosition.distance(walkableNode.getPosition());
+          // if (distanceToNode < radius) {
+          //     return false; // Colisión con un camino
+           if(collide(candidatePosition, radius, walkableNode.getPosition(),Game.getInstance().getParam(Config.Parameter.ENEMY_RADIUS_MAX))){
+               return false;
            }
        }
 
