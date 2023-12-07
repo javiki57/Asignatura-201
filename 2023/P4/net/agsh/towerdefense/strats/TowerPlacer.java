@@ -16,12 +16,16 @@ public class TowerPlacer {
     public static float getNodeValue(MapNode node, Map map) {
 
         float mapWidth = map.getSize().x;
+        float mapHeight = map.getSize().y;
 
-        // Obtener la coordenada x de la celda
+        // Obtener las coordenadas de la celda
         float xCoordinate = node.getPosition().x;
+        float yCoordinate = node.getPosition().y;
 
-        // Asignar un valor inversamente proporcional a la distancia a la coordenada x más grande
-        float value = 1.0f / (float) (mapWidth - xCoordinate + 1);
+        // Calcular la distancia al centro del mapa
+        float distanceToEdges = Math.min(Math.min(xCoordinate, mapWidth - xCoordinate), Math.min(yCoordinate, mapHeight - yCoordinate));
+        // Asignar un valor inversamente proporcional a la distancia al centro
+        float value = 5.0f / (distanceToEdges  + 1);
 
         return value;
     }
@@ -103,7 +107,6 @@ public class TowerPlacer {
             }else{
                 towers.add(tower);
             }
-
         }
 
         return placedTowers;
