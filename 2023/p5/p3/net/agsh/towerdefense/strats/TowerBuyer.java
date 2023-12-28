@@ -12,26 +12,57 @@ import java.util.ArrayList;
 public class TowerBuyer {
 
     public static ArrayList<Integer> buyTowers(ArrayList<Tower> towers, float money) {
-        // This is just a (bad) example. Replace ALL of this with your own code.
-        // The ArrayList<Integer> returned is a list of the indices of the towers you want to buy.
-        // For example, if you want to buy the first and third towers, return [0, 2].
-        // The selected towers must be affordable, and the total cost must be less than or equal to money.
-        // The indices should be given in the order that the towers are given in the original ArrayList<Tower> towers.
 
-        // Create an ArrayList<Integer> to store the indices of the towers you want to buy.
-        ArrayList<Integer> selected = new ArrayList<>();
+        ArrayList<Integer> currentSelection = new ArrayList<>();
+        ArrayList<Integer> bestSelection = new ArrayList<>();
+        float[] bestValue = new float[]{Float.MIN_VALUE};
 
-        // Loop through the towers.
-        for (int i = 0; i < towers.size(); i++) {
-            // If the tower is affordable, buy it.
-            if(money >= towers.get(i).getCost()) {
-                // Subtract the cost of the tower from money.
-                money -= towers.get(i).getCost();
-                // Add the index of the tower to selected.
-                selected.add(i);
+        buyTowersBacktracking(towers, money, 0, currentSelection, bestSelection, bestValue);
+
+        return bestSelection;
+    }
+
+    private static void buyTowersBacktracking(ArrayList<Tower> towers, float remainingMoney, int currentIndex,
+                                              ArrayList<Integer> currentSelection, ArrayList<Integer> bestSelection,
+                                              float[] bestValue) {
+        if (currentIndex == towers.size()) {
+            float totalValue = calculateTotalValue(towers, currentSelection);
+            if (totalValue > bestValue[0] && totalCost(towers, currentSelection) <= remainingMoney) {
+                bestValue[0] = totalValue;
+                bestSelection.clear();
+                bestSelection.addAll(currentSelection);
             }
+            return;
         }
 
-        return selected;
+        // Incluir la torreta actual en la selección
+        currentSelection.add(currentIndex);
+        buyTowersBacktracking(towers, remainingMoney - towers.get(currentIndex).getCost(),
+                currentIndex + 1, currentSelection, bestSelection, bestValue);
+        currentSelection.remove(currentSelection.size() - 1);  // Deshacer la inclusión
+
+        // No incluir la torreta actual en la selección
+        buyTowersBacktracking(towers, remainingMoney, currentIndex + 1, currentSelection, bestSelection, bestValue);
     }
+
+    private static float calculateTotalValue(ArrayList<Tower> towers, ArrayList<Integer> selection) {
+        float totalValue = 0.0f;
+        for (int idx : selection) {
+            totalValue += getTowerValue(towers.get(idx));
+        }
+        return totalValue;
+    }
+
+    private static float totalCost(ArrayList<Tower> towers, ArrayList<Integer> selection) {
+        float totalCost = 0.0f;
+        for (int idx : selection) {
+            totalCost += towers.get(idx).getCost();
+        }
+        return totalCost;
+    }
+
+    public static float getTowerValue(Tower tower) {
+        return tower.getCost() / 2 * tower.getRadius() + tower.getDispersion() / 3 * tower.getRange() + (tower.getDamage() / tower.getRange());
+    }
+
 }
